@@ -12,16 +12,12 @@ WORKDIR /app
 # Copiar JAR do stage anterior
 COPY --from=builder /build/target/take-a-break-web-1.0.0.jar app.jar
 
-# Expor porta 8081 (interna)
+# Expor porta padrão da aplicação
 EXPOSE 8081
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:8081/login || exit 1
+    CMD sh -c 'wget --no-verbose --tries=1 --spider "http://localhost:${PORT:-8081}/login" || exit 1'
 
-# Executar com variáveis de ambiente
-ENTRYPOINT ["java", "-jar", "app.jar", \
-    "--server.port=8081", \
-    "--spring.datasource.url=${DB_URL}", \
-    "--spring.datasource.username=${DB_USER}", \
-    "--spring.datasource.password=${DB_PASS}"]
+# Executar com configuração resolvida pelo Spring via environment/application.properties
+ENTRYPOINT ["java", "-jar", "app.jar"]
