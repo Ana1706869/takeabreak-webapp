@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: takeabreak-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: take_a_break_web
+      MYSQL_USER: takeabreak
+      MYSQL_PASSWORD: Informatica_1706869
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./src/main/resources/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  app:
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    container_name: takeabreak-app
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/take_a_break_web?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USER: takeabreak
+      DB_PASS: Informatica_1706869
+    ports:
+      - "8081:8081"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    links:
+      - mysql
+
+volumes:
+  mysql-data:

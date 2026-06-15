@@ -1,0 +1,491 @@
+CORRUPTION DIAGNOSTIC REPORT
+================================================================================
+Root: d:\Projeto de Informática\Take a Break App
+Total files: 1129
+Total dirs: 362
+Suspicious names: 212
+
+CRITICAL MISSING FILES
+--------------------------------------------------------------------------------
+- d:\Projeto de Informática\Take a Break App\webapp\pom.xml
+- d:\Projeto de Informática\Take a Break App\webapp\src\main\java\com\takeabreak\web\TakeABreakWebApplication.java
+
+SUSPICIOUS COUNT BY TOP-LEVEL
+--------------------------------------------------------------------------------
+- webapp: 212
+
+TOP-LEVEL ENTRIES UNDER webapp (escaped)
+--------------------------------------------------------------------------------
+- \x02@}pjT\xa4y.f\x1b\x0e
+- \x03I'}\xc0\xf2\t\xcf.hfl
+- \x03cm\xea\xc0\xd7\xe0#._\xd1\u2557
+- \x03\xc4\xcf \xe1\xf1\t\xc5.a\x01\xd4
+- \x04r\xe1\xc3c\xa3xy.n\u2591i
+- \x04\xc7\xb7\xd3\xc8\xbf\xd7\xbe.\u25606\x1c
+- \x06\xdd\xb9\xd7\n\xc0\u0192\xaf.x:$
+- \x06\xe3\u250c\x10o=\x0bG.\xa5jw
+- \x07\x1c\u2592a@i\x13\x1e.\u251c\x02\u2500
+- \tv\x1a\xbf\x10\x0cw\x18.~\xb5\xe3
+- \t\xf1@\xc5\xe78\u2592\u2593.\u2584`\xf4
+- \n-\xabt\xf4\u2584\xb7\xf3.x\xc1\u2591
+- \x0c\x1e\xc1\xdd\xa1\u2584\x16|.\xef\xc3\x0b
+- \r\u250c\xb8=\x15n?\xa6.\u2592tH
+- \x0eys\x13\x01\xfc\xb06."b\xa3
+- \x0fq\xa4\x10\u2566\xeaei.\xce\xe3"
+- \x11\x04Fn\xe3\xaa\x18\xe5.\xf7\x14\xd4
+- \x11\xb2=\xc34\x18J\xe0.\u2593\xd4\xf5
+- \x13]$d\xc5t\xf1\xff.2 \xa6
+- \x13h\xfc\x1e\x0fqbe.\u2563\u2534&
+- \x14\xd7\x1ey\xd7\x0b\u2584\xf5.\xef\u2518"
+- \x15\xc2\xe9zT\x02a\u2557.~}\xa3
+- \x16\xcf>\xeb%\xd7ip.\xa8\xd1I
+- \x18
+- \x18_ \u255ab\xdf\xed\xb7.z\xd5\x12
+- \x1a\x18kC\u255d\xa7,\x1c.\xa8*\xa6
+- \x1a&\xb4\xc0Yz~H.\xf6\u2557u
+- \x1a-cln\u2563\xebm.x\xed~
+- \x1a\xb6\xc1\xc9\u256cN\xa9\xd4.6=
+- \x1b\xda!\xa3\xf7\x0b\xe1\xfd.b\x12=
+- \x1b\xdeJ\xfe\xf4\xe8\xa9\xa5.\xf4\xed\xd6
+- \x1c\x15\xb6\x0egz\xc6\xfb.g\u2554\u256c
+- \x1c\xb0A\xaap@\x1e:.ym\xf9
+- \x1c\u2017\xaa&\x02\x02\xb1m.d\u25008
+- \x1eY3~\xab\xa1\xdeu.\x08\x1c\n
+- \x1fp\u2500\x06\x01%mx.\x0c\x0b\x10
+- \x1f\xf3\xd7!\xfb\x11\xef\xca.\xab\xece
+-  \x05z<\u2500\xeb\xf2\xd5.\x06\xf8\x14
+- #k\xe3\xa4\xc1\x15\xa2\x0e.\xfcc\u2534
+- $\x07
+- $o\x03\xc5\u2502[\u253c%.\x11\xa6\xc9
+- %g2\xa8\x0b\x1b\x1b\xcd.\u256c\x13v
+- %l\x13wn\xe6\xc5\x7f.(c%
+- %\u2510\xc5^\xafm2+.Q<\xee
+- '
+- '\xcfi\xe1B0\u2584a.\xb0\xd6\x1b
+- (\xab=>O\u2592\xa9;.\xd3\xdf\xe1
+- *\xde\x1d\u256c\xb6$-\xc5.\xc6\xd8\u2566
+- ,\xb9\xbd\x02\xa9m\xf3\xb2.k\xe0(
+- -\xa8}\xb6ro\xf4Y.\xeb\xd4a
+- .q\xf8\x1e
+- 0%\x1aqk\xd1\xe0\xaa.,\xd5\xe9
+- 2\xc4\xc5\t\xc3\n\xa3\xa5.`=\u2591
+- 2\xe6\u2550\xbe5m\xc1\x14.\xcdu\xf5
+- 3_h\xfa\xa0\xa2s\xd4.\xd0o\x08
+- 3u\xc5#\xec\xa0\xa3\xc1.\xfd\xe3\xba
+- 4z\xe3\xff\xa3r\x13\xf8.\u2591b\xb2
+- 5l\xcco\u2502\xb6\xb3\xc9.(w\xd9
+- 5x\xa2\x1b$9a\xf4.xo\xfd
+- 5\u2510bf3\x08a\u2500.Q(B
+- 6(\xe0\x1c\u2591*;,.\xc6\x06\xe6
+- 6\xd5\xd8\u2534\u0131Y\xc8,.\xe5\u255a\xc9
+- 6\xf0\xf2\u256c'\x15q}.'C3
+- 7*s\xdbz(\n\xea.pa\xcf
+- 7\xcaC8\xdd\x17@\u2518.\u253c$z
+- 8\xc9t\xcaw[\xd6\xc7.\xecd\xe3
+- 9\xf4\u2554_\xcf\xcf\u2591v.\xd7\u2591+
+- >D=C,#\x16\xd1.]\x1b\xef
+- D\x02\xbc\xfa\xfa\x18\xb4[.\xe7\xae\x0c
+- D\x17\t\u2518#\x1d)\xaa.\x0cH\xb8
+- D6\xa4\xce4\u0131RX.\xce\xe6\x0b
+- GFZ\xd1\xca\xc5KK.\x17\u2593.
+- I\xdf\xda\xe6\xfe\u2563\u2514M.\xa5\xff-
+- KJ|\u2554K\x16\u2518U.\u2017@\x1f
+- K~\x1f\xa2\u2584\u2588dV.\xf3x\x18
+- K\xff&\xaf\u2584"\x1f\xa0.p\xe3j
+- Ld\xbe|MS-\xe0.u\x1d\u2563
+- R\xde\xbc\xcc\u2514\xe8.A\u253c:
+- T\xf0;\xa3\xdaIZ\x1e.%;\xf9
+- U\xfe\xd5e\xd0\x07\u256c\xd9.f\xce}
+- V\xd8\xf9\xf9E\x1f8\xbb.\xf8]\xb8
+- V\xf9p\x177]\xce\xb0.\xaa\xb6X
+- [`\xb9$\xfbx&a.\xd5\xf9&
+- `j4\xf3\xcdj\x0bm.y\u2569\x05
+- `\xaa\xdbq\xf1\xb1\u0192\u2502.\xfb\xa6\xb0
+- c\xc83\u25002bq\u250c.\xc1\u2592\x08
+- c\xcc\xc8d@ \xa5\xec.\xea\x18\xba
+- d\xddu\u2560\u2500\xd9\u2524\xec.ZB\xc7
+- d\u2550\xb0\u2563\xc2\xf3\xce!.p(\xcf
+- d\u2588z\x7f#\xb4\xcc\xb6.\xda5R
+- e\x03]\xda|R\x11\xce.w24
+- e\x1c\x1f\x13\xc4\x158}.\u2534z`
+- e"\xf8\xfek\xdcj).\xbc\xd9\u255a
+- f\xa5\xf0F\xa0{\xfe\u2500.\xfa\u2580\x10
+- f\xac\x1eg\x1a\xa09k.\u2518\xeco
+- h$\u2514::\xe8\xb1\xa5.u\xff\u2569
+- i\xcc\x06\x1eg\xc0\xe8k."\u2551!
+- j`\xbc\r\xb1\xcd\u2502p.\xf5\xbdt
+- j~\xe0\xeef\x10\xe9\xea.\xfap\xe4
+- k\xbbb&^\xbam\xc8.\x12\x02<
+- l\xe1+\xd8o*\xd4\xb7.n\xe5f
+- l\xebf\xc8zi\xed).K\u2563\xd3
+- l\xfc\xdd\xf4x\xd4\xd6\x04.\xf2_\xdc
+- mygpu\x165\xef.!2\xf1
+- o
+- o\xf0\xa5\xb4\xaep\xb9\xda.\xc4\xd1C
+- p
+- p\u2557)t\xb9\x1a\x12\xee.\u251c\u256c\xc0
+- qa\xb4p\xaa'iy.\xf6\xfd
+- r&\xf4\u2510\u2591\u2592a\xdd.<aW
+- r;\xd8\xe92?\u0192=.if\xcd
+- s:l\u255a\xddua\u2592.\xd6\xb2\xaf
+- src
+- u\twq\xcbu\xeco.j\xc5u
+- u#=\xe4\xcb~\x01\xf6.]l\xf3
+- u\xbe+d4\xe2\x10d.\x1c\xe0"
+- u\xcf\n\xdbq\t\xe4\xdd.\xb7\xa7q
+- v\xe2\xa5\x16\xca\u2518\tw.\u2584\xaa\x07
+- x\xf7w\x05p\u2588d\xb9.\xce\nq
+- x\u252c4q\xfe\x16\xa8\xb0.\xe72V
+- y\x194[\xa1\xd2\xa8\xbe.\x0b\u2554a
+- y\x1bx\xa3\xa6*.\xeb.\xde\xe5\xf6
+- ydw.\u2554\x03}
+- z]\u252c]\u2584t]\xd2.\xf8\xcac
+- {|\xd7bqw.\u2514\u251cA
+- |\xc7K\xad\xd3\x06\u2017\u2563.d\xb0\xad
+- |\xfc \xef\xe0\xe7\xdb\xd9.\xf2KT
+- }\xe9\xd8\x06*\x04\u251c\x1d.\xe5\u0192\u2563
+- }\xeaz\xe5xf,j.\u25576\x16
+- ~\xa8\xe4\xc5\u2588\xd8-\x0b.\xe8\xaa\xf9
+- \xa2\xef\u2017\x03\xb07i\x19.\xa8Cp
+- \xa3\xf2a\u2502\u0131:\xd7?.\u2510\xc9\x1c
+- \xa4f$\xdf\xb34\xd89.\u253c\xefC
+- \xa5\x17\u2563\xf3l\xcd\u2500\xb6.\xf7w\xbf
+- \xa8\xab\u253c.\xd8&\xe7q.\u2592t\xd5
+- \xaa\u255d3\xa9:\xef\xdc\u253c.\x10\x19\xca
+- \xac\u2591\x15\xc8\xfa\x12\x08\u2588.\xa7\xd9\xd2
+- \xad\u2566'|\u2584\xaflY.p4\xa2
+- \xae&\u2563\xa7E\u2592.ja\xc3
+- \xae\xc8N\xba\xe1\u2560\xa4g.O\xdc\xd6
+- \xb0^\xf5\xe8\u2593Y\x13\xcb.\u2588\u2580\xed
+- \xb1\x05\xe9,\x16\x1e\xac\xbb.W.Q
+- \xb2"\xe0\u256c\xdb\r\xbc\x18.T\xbc3
+- \xb3\u2017\t\x1f\xc0;[\x16.\x14M
+- \xb4\xf3\xb3
+- \xb5\x0bm\xb6\u2510wn<.\xb7\ra
+- \xb6lF\x12\u256cO\xcb\xd6.S\u255d8
+- \xb6\xef\x14:\xbd7\u2591b.P\u2592\u256c
+- \xb86\xd6\xf2.(\x1eF
+- \xb9\x04;\rt\x08\xe5;.\x0c?s
+- \xb9\x10\xa7\x0c\u2592\xeeX\xf6.vm,
+- \xbcq\xa8?xoa\x03.\xabuU
+- \xbc\xa2\xe8\xd6x\xd8\xc2Q.K\x08\xad
+- \xbdA_\x0b\xda\xfd\xe4+.n\xcb\x03
+- \xbdK\xa9\xef\xf8\xabk|.sz\xbc
+- \xbe]\xef]:M\x0e\xd2.b\xae\u2569
+- \xbe\xe06\xb7\u2580;'\x1e.\xb2\xe50
+- \xbf\x11g\x0c}\xa0\u25a0\xf6.\xe4\xdc~
+- \xbf\xa6\x14\xac}\r\t\xe3.a\xfe\u2588
+- \xc4\nz\xe73=i\u2566.\xfad\xfe
+- \xc4 0r36\u253c0.\u2524\xba\x10
+- \xc6\x12_\u2017\xc6Ev\xf2.<\xf0G
+- \xc63\xd6\xb3\xe0\xec\rk.\xfe\t\u2557
+- \xc7_>\xdf\xd2vg\u2566.\xe9\xf3\xda
+- \xc7\xd6\xac\xc3\xe6\xe3\x7f\u256c.zv\xd2
+- \xc8n\n\u0131\xa5\xe5\x04\xd2.\u2591\xbe\xdd
+- \xc8\xea3\xe5\xa5\x7f\x7fJ.bm\u2510
+- \xcah\x19cr\u2569Ml.\u252c\n\xa7
+- \xca\u2557(?\xc7\x7f\xf4\xf6.\xe6?\x04
+- \xccE\xa8\x01\xb3\xf8\xf1\xee.\xb3!8
+- \xcc\xbfl\xae\xd9\xed(.\u252c\xe0a
+- \xd0\u2580sL\xe2\xedT(.+n~
+- \xd3\x07\xd6\u252c\x01y\xde\xf5.\xc1]\xcd
+- \xd3&._\u2560\x16
+- \xd3\xa7n\xc9\xf5\x04M\xd4.=\u2592\u2588
+- \xd4@\xcai\u2580me\x02.6\xc6\x19
+- \xd5\xc2Ob\xebg\x12T.~iR
+- \xd6\u255a\xb5\xa8\xdc\xaaz\n.\xd9:r
+- \xd7
+- \xd7\xcbaCn\xbb\x0b\xef.\u2550\xfdw
+- \xd7\u2550h\u252c\xa8i:s.\xe8\x17\xe7
+- \xd8\xfa\xb61\xea\xa7\x12\xff.\r\xa4r
+- \xd9\xac
+- \xda]\xf6\x1f\u2514\u2510I\u2569.\u255a\x1f\xe9
+- \xdb\x12\xaf\xd4\xaa\xd9\x1a\u2580.\xf6\x1e\xbd
+- \xdc_!\xfa\x19\xe4 \xd4.(\x14\xed
+- \xe0\x16w\xacin}q.\xbcz\xcf
+- \xe1vS\xbf\xf75$\x18.\xe7\xd8o
+- \xe2\xce\u2557a\xc6\x134\xeb.\xb8\u2500n
+- \xe2\xf7}o\xe0\u2588ow.,\x1d\xc6
+- \xe3\x17\x08\u2593Xx\xbf\xa5.^\u2563D
+- \xe3\xb11\xdfX\xfc\xcb\x17.\xbc\x07\x16
+- \xe6h\xc7ut\x14\xd2}.\xd90\xf2
+- \xe6\xe6V\xae\xb6\xd2\xca\xca.\xe0\xbc\u2566
+- \xe7\xbfg\xeae\u2500\xf3\u2524.kc\x11
+- \xe7\u255d\xae\xeb\xc7@|\x1b.\x111n
+- \xe8.U\x0b;
+- \xe8k\xc5\xa4S,\xaf\x0e.x8h
+- \xe9\x077\xc9\xa4.%\u251c\xe7
+- \xea\u25a0\xd7c\x1a\x0c\xd1B.Yq\u2017
+- \xeb\x04XGG1\xcc\xc0.\x0eS\x19
+- \xeb.\x12\u2593g:rl.\x19\xc9\xaf
+- \xec\xfb1&\xba\u2584\u2500&.\xbcP?
+- \xed_\xf1\xf0y\xa2\xfc\x15.\xe2\xe8u
+- \xed\xa9\xf7\xb0<\u253c\xd4\xaf.\xc7\xe7\xe2
+- \xef>p^7.\u2557\xaf\xbd
+- \xf1\xd02\xe3\xf5\xf6\xf8\xcf.\xe4\x15\xdb
+- \xf1\u2500\xf9\u255dd\xe6]%.\x0f\xb6\x11
+- \xf2\u250c\xda\x14\xf6\xa8\xa8\xfd.i3\u2502
+- \xf4\u252c\xcb#\xa4s\xfc\xf8.|1[
+- \xf5l&\x7fac\u251c\u250c.y\u252c\xab
+- \xf5m\xd3qv\xbd\xa9$.\xf3\x1bR
+- \xf7\x01gl\x10p\xca\xe4.\xc3\u2591
+- \xf7!\xdb\x19b\x19\u2592(.\xdd\u250cX
+- \xf9q|L8V\xd3\xb6.\x05\xd9\xfc
+- \xfb\xf6\xb0\xc6\xf9,\u2593\xbd.\xf5\xfc>
+- \xfc\xf1\xf4\xa5\u2588\u2569\x04l.$3\xaa
+- \xfc\u2518.\xad,u
+- \xfc\u25926\u2500[\xa4\u252c\xe6.\xbb\xca]
+- \xfe(}\x0cb\xa2\x04f.\u251c\u2502\xc8
+- \xff\x12\xec\xbf\xc1\xcaBS.\xfbr\u2534
+- \u0131yyy\xb6\xfc\xbe\u2551.\u2518u_
+- \u0131\xe1\xbb\xe0tv\u252c\x15.\xc0\xda\x01
+- \u0192\xadq\u2557\u2502e.A\xd0\xb6
+- \u2502\x19I8?MgN.\xb1\xd4\xf0
+- \u25022h\xc2Z\xc3\xbe\xfe.\x17\xc6\xe2
+- \u250c\xcd\xb9\x1by\xb8\xaaO.\xbb\xe6\u2551
+- \u2514\x0f2\xe0\x03\u2017\xf0\u2554.k\u2557\xbc
+- \u2514\xb8"W\xf6\u2550\xdc\xff.\xcc\u25a0\x0e
+- \u2518@W:\u0192T\u2500\xa7.\xd8\x0c\u2550
+- \u2518_\x15\u2514m\x13\xdd_.+D\xd6
+- \u2518\xee$\xa3\u0192\xaa3\xba.xqh
+- \u2524)\xb4\x0c\xab\u256c\xf3f.1d\xe5
+- \u2524\xd0\xa0\xcc9\xb1.\xde7\xe4
+- \u2524\xf5\xb8\xd0\u2566\xa2mf.%\xe8\xe7
+- \u252cVP\xc5J l\xce.\xbb\xc5\xf4
+- \u2534\x12\xaa\xeb;\xc0\u255a\xc3.?\xf6\u2592
+- \u2534,"}\xcc8\xdc\xf4.r\x05\x19
+- \u2534\xd9\xa6 \u2554\t\xdc\u2500.{b\xc0
+- \u253c\xc1\xc3\xfe)\x16w\x07.<\x1c4
+- \u2551\xe4\u2557\xa9\xda\u2551\xe37.\xd1\xc3*
+- \u2551\xe6\x1e\u252ci\u2510
+- \u2554\xd6l\u25a0\u252c\xe3\xe5\xc1.\xbe\xe4]
+- \u255ah\xbdt\xb7qi\xda.b\xcd\xd5
+- \u255a\xdc\xb1sme\xbbc.\xd3P\u2591
+- \u255a\xf8\xdc\x08\x08\u2500\xc0\x11.\x11\xd2\x14
+- \u255dQ\xd6R\xceCQ@.\xe4\x0b\u251c
+- \u2560\x17\u250c\xde\x7f\xb4\xa3x.\xb6\x1b\u252c
+- \u2560"\xca\xfe\xec\xfa9).U\xc9a
+- \u2566\x06\u2551\xca\xa8\xf1"\xab.\xb4dh
+- \u25668>&\x1c+p\xb7.\xe9\xa7\u2514
+- \u2566\u25a0\xac
+- \u256cd\u2017\x1766\xbc\xd8.'\xfd\n
+- \u256cq\xb7\x18\u2500z\t\u2560.\xe5g\xae
+- \u2580\xe1}\u2580S\xdf\xf7\xcb.\x1dk\xe7
+- \u2591\xe4i\xd4\u256c-\u2017\xb1.\x0fe\xbc
+- \u2593\xf7*f\xd4u\u250cF.-!\u2514
+- \u25a0\x0f\xcc[\xf0\xc7.k]\xf2
+
+FULL SUSPICIOUS LIST (escaped path + reasons)
+--------------------------------------------------------------------------------
+0001. [dir] webapp\\\x02@}pjT\xa4y.f\x1b\x0e :: control-char
+0002. [dir] webapp\\\x03\xc4\xcf \xe1\xf1\t\xc5.a\x01\xd4 :: control-char
+0003. [dir] webapp\\\x04r\xe1\xc3c\xa3xy.n\u2591i :: control-char
+0004. [dir] webapp\\\tv\x1a\xbf\x10\x0cw\x18.~\xb5\xe3 :: control-char, high-symbol-ratio
+0005. [dir] webapp\\\x0c\x1e\xc1\xdd\xa1\u2584\x16|.\xef\xc3\x0b :: control-char, high-symbol-ratio
+0006. [dir] webapp\\\x11\x04Fn\xe3\xaa\x18\xe5.\xf7\x14\xd4 :: control-char, high-symbol-ratio
+0007. [dir] webapp\\\x14\xd7\x1ey\xd7\x0b\u2584\xf5.\xef\u2518" :: control-char, high-symbol-ratio
+0008. [dir] webapp\\\x15\xc2\xe9zT\x02a\u2557.~}\xa3 :: control-char, high-symbol-ratio
+0009. [dir] webapp\\\x16\xcf>\xeb%\xd7ip.\xa8\xd1I :: control-char, high-symbol-ratio
+0010. [dir] webapp\\\x18_ \u255ab\xdf\xed\xb7.z\xd5\x12 :: control-char
+0011. [dir] webapp\\\x1a\x18kC\u255d\xa7,\x1c.\xa8*\xa6 :: control-char, high-symbol-ratio
+0012. [dir] webapp\\\x1a&\xb4\xc0Yz~H.\xf6\u2557u :: control-char, high-symbol-ratio
+0013. [dir] webapp\\\x1b\xda!\xa3\xf7\x0b\xe1\xfd.b\x12= :: control-char, high-symbol-ratio
+0014. [dir] webapp\\\x1b\xdeJ\xfe\xf4\xe8\xa9\xa5.\xf4\xed\xd6 :: control-char
+0015. [dir] webapp\\\x1c\xb0A\xaap@\x1e:.ym\xf9 :: control-char
+0016. [dir] webapp\\\x1eY3~\xab\xa1\xdeu.\x08\x1c\n :: control-char, high-symbol-ratio
+0017. [dir] webapp\\\x1fp\u2500\x06\x01%mx.\x0c\x0b\x10 :: control-char, high-symbol-ratio
+0018. [dir] webapp\\ \x05z<\u2500\xeb\xf2\xd5.\x06\xf8\x14 :: control-char, high-symbol-ratio
+0019. [dir] webapp\\#k\xe3\xa4\xc1\x15\xa2\x0e.\xfcc\u2534 :: control-char, high-symbol-ratio
+0020. [dir] webapp\\$o\x03\xc5\u2502[\u253c%.\x11\xa6\xc9 :: control-char, high-symbol-ratio
+0021. [dir] webapp\\' :: high-symbol-ratio
+0022. [dir] webapp\\'\xcfi\xe1B0\u2584a.\xb0\xd6\x1b :: control-char
+0023. [dir] webapp\\*\xde\x1d\u256c\xb6$-\xc5.\xc6\xd8\u2566 :: control-char, high-symbol-ratio
+0024. [dir] webapp\\,\xb9\xbd\x02\xa9m\xf3\xb2.k\xe0( :: control-char
+0025. [dir] webapp\\2\xc4\xc5\t\xc3\n\xa3\xa5.`=\u2591 :: control-char, high-symbol-ratio
+0026. [dir] webapp\\5x\xa2\x1b$9a\xf4.xo\xfd :: control-char
+0027. [dir] webapp\\6(\xe0\x1c\u2591*;,.\xc6\x06\xe6 :: control-char
+0028. [dir] webapp\\7*s\xdbz(\n\xea.pa\xcf :: control-char
+0029. [dir] webapp\\9j\x1f\xe2x\\\xfc\u2518.\xad,u :: control-char
+0030. [dir] webapp\\D\x02\xbc\xfa\xfa\x18\xb4[.\xe7\xae\x0c :: control-char, high-symbol-ratio
+0031. [dir] webapp\\D\x17\t\u2518#\x1d)\xaa.\x0cH\xb8 :: control-char, high-symbol-ratio
+0032. [dir] webapp\\GFZ\xd1\xca\xc5KK.\x17\u2593. :: control-char
+0033. [dir] webapp\\KJ|\u2554K\x16\u2518U.\u2017@\x1f :: control-char, high-symbol-ratio
+0034. [dir] webapp\\Ld\xbe|MS-\xe0.u\x1d\u2563 :: control-char
+0035. [dir] webapp\\U\xfe\xd5e\xd0\x07\u256c\xd9.f\xce} :: control-char
+0036. [dir] webapp\\V\xd8\xf9\xf9E\x1f8\xbb.\xf8]\xb8 :: control-char
+0037. [dir] webapp\\Y\r\xb7ZHg'\\.q\xf8\x1e :: control-char
+0038. [dir] webapp\\Z\\\xae&\u2563\xa7E\u2592.ja\xc3 :: high-symbol-ratio
+0039. [dir] webapp\\`\xaa\xdbq\xf1\xb1\u0192\u2502.\xfb\xa6\xb0 :: high-symbol-ratio
+0040. [dir] webapp\\c\xcc\xc8d@ \xa5\xec.\xea\x18\xba :: control-char
+0041. [dir] webapp\\d\u2588z\x7f#\xb4\xcc\xb6.\xda5R :: high-symbol-ratio
+0042. [dir] webapp\\e\x03]\xda|R\x11\xce.w24 :: control-char
+0043. [dir] webapp\\h$\u2514::\xe8\xb1\xa5.u\xff\u2569 :: high-symbol-ratio
+0044. [dir] webapp\\j`\xbc\r\xb1\xcd\u2502p.\xf5\xbdt :: control-char
+0045. [dir] webapp\\k\\\u25a0\x0f\xcc[\xf0\xc7.k]\xf2 :: control-char
+0046. [dir] webapp\\k\xbbb&^\xbam\xc8.\x12\x02< :: control-char, high-symbol-ratio
+0047. [dir] webapp\\l\xfc\xdd\xf4x\xd4\xd6\x04.\xf2_\xdc :: control-char
+0048. [dir] webapp\\u\xbe+d4\xe2\x10d.\x1c\xe0" :: control-char
+0049. [dir] webapp\\u\xcf\n\xdbq\t\xe4\xdd.\xb7\xa7q :: control-char
+0050. [dir] webapp\\x\u252c4q\xfe\x16\xa8\xb0.\xe72V :: control-char
+0051. [dir] webapp\\y\x194[\xa1\xd2\xa8\xbe.\x0b\u2554a :: control-char, high-symbol-ratio
+0052. [dir] webapp\\y\x1bx\xa3\xa6*.\xeb.\xde\xe5\xf6 :: control-char
+0053. [dir] webapp\\|\xc7K\xad\xd3\x06\u2017\u2563.d\xb0\xad :: control-char, high-symbol-ratio
+0054. [dir] webapp\\}\xe9\xd8\x06*\x04\u251c\x1d.\xe5\u0192\u2563 :: control-char, high-symbol-ratio
+0055. [dir] webapp\\~\xa8\xe4\xc5\u2588\xd8-\x0b.\xe8\xaa\xf9 :: control-char
+0056. [dir] webapp\\\xa3\xf2a\u2502\u0131:\xd7?.\u2510\xc9\x1c :: control-char, high-symbol-ratio
+0057. [dir] webapp\\\xa8\xab\u253c.\xd8&\xe7q.\u2592t\xd5 :: high-symbol-ratio
+0058. [dir] webapp\\\xad\u2566'|\u2584\xaflY.p4\xa2 :: high-symbol-ratio
+0059. [dir] webapp\\\xb0^\xf5\xe8\u2593Y\x13\xcb.\u2588\u2580\xed :: control-char, high-symbol-ratio
+0060. [dir] webapp\\\xb1\x05\xe9,\x16\x1e\xac\xbb.W.Q :: control-char, high-symbol-ratio
+0061. [dir] webapp\\\xb2"\xe0\u256c\xdb\r\xbc\x18.T\xbc3 :: control-char
+0062. [dir] webapp\\\xb6lF\x12\u256cO\xcb\xd6.S\u255d8 :: control-char
+0063. [dir] webapp\\\xb6\xef\x14:\xbd7\u2591b.P\u2592\u256c :: control-char, high-symbol-ratio
+0064. [dir] webapp\\\xbcq\xa8?xoa\x03.\xabuU :: control-char
+0065. [dir] webapp\\\xbc\xa2\xe8\xd6x\xd8\xc2Q.K\x08\xad :: control-char
+0066. [dir] webapp\\\xc4\nz\xe73=i\u2566.\xfad\xfe :: control-char
+0067. [dir] webapp\\\xc4 0r36\u253c0.\u2524\xba\x10 :: control-char
+0068. [dir] webapp\\\xc6\x12_\u2017\xc6Ev\xf2.<\xf0G :: control-char
+0069. [dir] webapp\\\xc6\u2580G\\\xb86\xd6\xf2.(\x1eF :: control-char
+0070. [dir] webapp\\\xc8n\n\u0131\xa5\xe5\x04\xd2.\u2591\xbe\xdd :: control-char
+0071. [dir] webapp\\\xcah\x19cr\u2569Ml.\u252c\n\xa7 :: control-char, high-symbol-ratio
+0072. [dir] webapp\\\xd3\x07\xd6\u252c\x01y\xde\xf5.\xc1]\xcd :: control-char
+0073. [dir] webapp\\\xd3\xa7n\xc9\xf5\x04M\xd4.=\u2592\u2588 :: control-char
+0074. [dir] webapp\\\xd4@\xcai\u2580me\x02.6\xc6\x19 :: control-char
+0075. [dir] webapp\\\xd4\xec\u2569\xf6\u2551\x1e\xe8\x02."\\\x18 :: control-char, high-symbol-ratio
+0076. [dir] webapp\\\xd5\xc2Ob\xebg\x12T.~iR :: control-char
+0077. [dir] webapp\\\xd7\xcbaCn\xbb\x0b\xef.\u2550\xfdw :: control-char
+0078. [dir] webapp\\\xda]\xf6\x1f\u2514\u2510I\u2569.\u255a\x1f\xe9 :: control-char, high-symbol-ratio
+0079. [dir] webapp\\\xdc_!\xfa\x19\xe4 \xd4.(\x14\xed :: control-char
+0080. [dir] webapp\\\xe0\x16w\xacin}q.\xbcz\xcf :: control-char
+0081. [dir] webapp\\\xe2\xf7}o\xe0\u2588ow.,\x1d\xc6 :: control-char
+0082. [dir] webapp\\\xe3\x17\x08\u2593Xx\xbf\xa5.^\u2563D :: control-char, high-symbol-ratio
+0083. [dir] webapp\\\xe3\xb11\xdfX\xfc\xcb\x17.\xbc\x07\x16 :: control-char
+0084. [dir] webapp\\\xea\u25a0\xd7c\x1a\x0c\xd1B.Yq\u2017 :: control-char, high-symbol-ratio
+0085. [dir] webapp\\\xec\xfb1&\xba\u2584\u2500&.\xbcP? :: high-symbol-ratio
+0086. [dir] webapp\\\xf0\xd4J5\u2554\xa1\\\xe8.U\x0b; :: control-char
+0087. [dir] webapp\\\xf1\xad\xb6\u255a\xbe\\\xd3&._\u2560\x16 :: control-char, high-symbol-ratio
+0088. [dir] webapp\\\xf2\u250c\xda\x14\xf6\xa8\xa8\xfd.i3\u2502 :: control-char, high-symbol-ratio
+0089. [dir] webapp\\\xf5m\xd3qv\xbd\xa9$.\xf3\x1bR :: control-char
+0090. [dir] webapp\\\xf7\x01gl\x10p\xca\xe4.\xc3\u2591 :: control-char, high-symbol-ratio
+0091. [dir] webapp\\\xfc\xf1\xf4\xa5\u2588\u2569\x04l.$3\xaa :: control-char, high-symbol-ratio
+0092. [dir] webapp\\\xfc\u25926\u2500[\xa4\u252c\xe6.\xbb\xca] :: high-symbol-ratio
+0093. [dir] webapp\\\xfe\x03\\\xe9\x077\xc9\xa4.%\u251c\xe7 :: control-char, high-symbol-ratio
+0094. [dir] webapp\\\xfe(}\x0cb\xa2\x04f.\u251c\u2502\xc8 :: control-char, high-symbol-ratio
+0095. [dir] webapp\\\u0131\xe1\xbb\xe0tv\u252c\x15.\xc0\xda\x01 :: control-char
+0096. [dir] webapp\\\u250c\xcd\xb9\x1by\xb8\xaaO.\xbb\xe6\u2551 :: control-char, high-symbol-ratio
+0097. [dir] webapp\\\u2514\\\u0192\xadq\u2557\u2502e.A\xd0\xb6 :: high-symbol-ratio
+0098. [dir] webapp\\\u2514\xb8"W\xf6\u2550\xdc\xff.\xcc\u25a0\x0e :: control-char, high-symbol-ratio
+0099. [dir] webapp\\\u2518_\x15\u2514m\x13\xdd_.+D\xd6 :: control-char
+0100. [dir] webapp\\\u2524)\xb4\x0c\xab\u256c\xf3f.1d\xe5 :: control-char, high-symbol-ratio
+0101. [dir] webapp\\\u2524\xf5\xb8\xd0\u2566\xa2mf.%\xe8\xe7 :: high-symbol-ratio
+0102. [dir] webapp\\\u2534\x12\xaa\xeb;\xc0\u255a\xc3.?\xf6\u2592 :: control-char, high-symbol-ratio
+0103. [dir] webapp\\\u2534,"}\xcc8\xdc\xf4.r\x05\x19 :: control-char
+0104. [dir] webapp\\\u253c\xc1\xc3\xfe)\x16w\x07.<\x1c4 :: control-char, high-symbol-ratio
+0105. [dir] webapp\\\u2551\xe4\u2557\xa9\xda\u2551\xe37.\xd1\xc3* :: high-symbol-ratio
+0106. [dir] webapp\\\u2551\xe6\x1e\u252ci\u2510 :: control-char, high-symbol-ratio
+0107. [dir] webapp\\\u2566\u25a0\xac :: high-symbol-ratio
+0108. [dir] webapp\\\u256cd\u2017\x1766\xbc\xd8.'\xfd\n :: control-char, high-symbol-ratio
+0109. [dir] webapp\\\u2593\xf7*f\xd4u\u250cF.-!\u2514 :: high-symbol-ratio
+0110. [file] webapp\\\x03I'}\xc0\xf2\t\xcf.hfl :: control-char
+0111. [file] webapp\\\x03cm\xea\xc0\xd7\xe0#._\xd1\u2557 :: control-char
+0112. [file] webapp\\\x04\xc7\xb7\xd3\xc8\xbf\xd7\xbe.\u25606\x1c :: control-char, high-symbol-ratio
+0113. [file] webapp\\\x06\xdd\xb9\xd7\n\xc0\u0192\xaf.x:$ :: control-char, high-symbol-ratio
+0114. [file] webapp\\\x06\xe3\u250c\x10o=\x0bG.\xa5jw :: control-char, high-symbol-ratio
+0115. [file] webapp\\\x07\x1c\u2592a@i\x13\x1e.\u251c\x02\u2500 :: control-char, high-symbol-ratio
+0116. [file] webapp\\\t\xf1@\xc5\xe78\u2592\u2593.\u2584`\xf4 :: control-char, high-symbol-ratio
+0117. [file] webapp\\\n-\xabt\xf4\u2584\xb7\xf3.x\xc1\u2591 :: control-char, high-symbol-ratio
+0118. [file] webapp\\\r\u250c\xb8=\x15n?\xa6.\u2592tH :: control-char, high-symbol-ratio
+0119. [file] webapp\\\x0eys\x13\x01\xfc\xb06."b\xa3 :: control-char, high-symbol-ratio
+0120. [file] webapp\\\x0fq\xa4\x10\u2566\xeaei.\xce\xe3" :: control-char, high-symbol-ratio
+0121. [file] webapp\\\x11\xb2=\xc34\x18J\xe0.\u2593\xd4\xf5 :: control-char
+0122. [file] webapp\\\x13]$d\xc5t\xf1\xff.2 \xa6 :: control-char
+0123. [file] webapp\\\x13h\xfc\x1e\x0fqbe.\u2563\u2534& :: control-char, high-symbol-ratio
+0124. [file] webapp\\\x1a-cln\u2563\xebm.x\xed~ :: control-char
+0125. [file] webapp\\\x1a\xb6\xc1\xc9\u256cN\xa9\xd4.6= :: control-char, high-symbol-ratio
+0126. [file] webapp\\\x1c\x15\xb6\x0egz\xc6\xfb.g\u2554\u256c :: control-char, high-symbol-ratio
+0127. [file] webapp\\\x1c\u2017\xaa&\x02\x02\xb1m.d\u25008 :: control-char, high-symbol-ratio
+0128. [file] webapp\\\x1f\xf3\xd7!\xfb\x11\xef\xca.\xab\xece :: control-char, high-symbol-ratio
+0129. [file] webapp\\%g2\xa8\x0b\x1b\x1b\xcd.\u256c\x13v :: control-char, high-symbol-ratio
+0130. [file] webapp\\%l\x13wn\xe6\xc5\x7f.(c% :: control-char
+0131. [file] webapp\\%\u2510\xc5^\xafm2+.Q<\xee :: high-symbol-ratio
+0132. [file] webapp\\,)\xb1%\\ydw.\u2554\x03} :: control-char
+0133. [file] webapp\\0%\x1aqk\xd1\xe0\xaa.,\xd5\xe9 :: control-char
+0134. [file] webapp\\2\xe6\u2550\xbe5m\xc1\x14.\xcdu\xf5 :: control-char
+0135. [file] webapp\\3_h\xfa\xa0\xa2s\xd4.\xd0o\x08 :: control-char
+0136. [file] webapp\\4z\xe3\xff\xa3r\x13\xf8.\u2591b\xb2 :: control-char
+0137. [file] webapp\\5\u2510bf3\x08a\u2500.Q(B :: control-char
+0138. [file] webapp\\6\xf0\xf2\u256c'\x15q}.'C3 :: control-char
+0139. [file] webapp\\7\xcaC8\xdd\x17@\u2518.\u253c$z :: control-char
+0140. [file] webapp\\>D=C,#\x16\xd1.]\x1b\xef :: control-char
+0141. [file] webapp\\D6\xa4\xce4\u0131RX.\xce\xe6\x0b :: control-char
+0142. [file] webapp\\K~\x1f\xa2\u2584\u2588dV.\xf3x\x18 :: control-char, high-symbol-ratio
+0143. [file] webapp\\K\xff&\xaf\u2584"\x1f\xa0.p\xe3j :: control-char, high-symbol-ratio
+0144. [file] webapp\\T\xf0;\xa3\xdaIZ\x1e.%;\xf9 :: control-char
+0145. [file] webapp\\V\xf9p\x177]\xce\xb0.\xaa\xb6X :: control-char
+0146. [file] webapp\\`j4\xf3\xcdj\x0bm.y\u2569\x05 :: control-char
+0147. [file] webapp\\c\xc83\u25002bq\u250c.\xc1\u2592\x08 :: control-char
+0148. [file] webapp\\e\x1c\x1f\x13\xc4\x158}.\u2534z` :: control-char, high-symbol-ratio
+0149. [file] webapp\\f\xa5\xf0F\xa0{\xfe\u2500.\xfa\u2580\x10 :: control-char, high-symbol-ratio
+0150. [file] webapp\\f\xac\x1eg\x1a\xa09k.\u2518\xeco :: control-char, high-symbol-ratio
+0151. [file] webapp\\ge\xf0l\xc1\xc4\xfe\xa4.\\$\x07 :: control-char
+0152. [file] webapp\\i\xcc\x06\x1eg\xc0\xe8k."\u2551! :: control-char, high-symbol-ratio
+0153. [file] webapp\\j~\xe0\xeef\x10\xe9\xea.\xfap\xe4 :: control-char
+0154. [file] webapp\\mygpu\x165\xef.!2\xf1 :: control-char
+0155. [file] webapp\\p\u2557)t\xb9\x1a\x12\xee.\u251c\u256c\xc0 :: control-char, high-symbol-ratio
+0156. [file] webapp\\r&\xf4\u2510\u2591\u2592a\xdd.<aW :: high-symbol-ratio
+0157. [file] webapp\\u\twq\xcbu\xeco.j\xc5u :: control-char
+0158. [file] webapp\\u#=\xe4\xcb~\x01\xf6.]l\xf3 :: control-char
+0159. [file] webapp\\v\xe2\xa5\x16\xca\u2518\tw.\u2584\xaa\x07 :: control-char, high-symbol-ratio
+0160. [file] webapp\\x\xd2\u2017\x7f\xad\xcc\xe9\x06.\\\xd9\xac :: control-char, high-symbol-ratio
+0161. [file] webapp\\x\xf7w\x05p\u2588d\xb9.\xce\nq :: control-char
+0162. [file] webapp\\}\xeaz\xe5xf,j.\u25576\x16 :: control-char
+0163. [file] webapp\\\xa2\xef\u2017\x03\xb07i\x19.\xa8Cp :: control-char, high-symbol-ratio
+0164. [file] webapp\\\xa5\x17\u2563\xf3l\xcd\u2500\xb6.\xf7w\xbf :: control-char, high-symbol-ratio
+0165. [file] webapp\\\xaa\u255d3\xa9:\xef\xdc\u253c.\x10\x19\xca :: control-char, high-symbol-ratio
+0166. [file] webapp\\\xac\u2591\x15\xc8\xfa\x12\x08\u2588.\xa7\xd9\xd2 :: control-char, high-symbol-ratio
+0167. [file] webapp\\\xb3\u2017\t\x1f\xc0;[\x16.\x14M :: control-char, high-symbol-ratio
+0168. [file] webapp\\\xb5\x0bm\xb6\u2510wn<.\xb7\ra :: control-char, high-symbol-ratio
+0169. [file] webapp\\\xb9\x04;\rt\x08\xe5;.\x0c?s :: control-char, high-symbol-ratio
+0170. [file] webapp\\\xb9\x10\xa7\x0c\u2592\xeeX\xf6.vm, :: control-char
+0171. [file] webapp\\\xbdA_\x0b\xda\xfd\xe4+.n\xcb\x03 :: control-char
+0172. [file] webapp\\\xbe]\xef]:M\x0e\xd2.b\xae\u2569 :: control-char
+0173. [file] webapp\\\xbe\xe06\xb7\u2580;'\x1e.\xb2\xe50 :: control-char
+0174. [file] webapp\\\xbf\x11g\x0c}\xa0\u25a0\xf6.\xe4\xdc~ :: control-char, high-symbol-ratio
+0175. [file] webapp\\\xbf\xa6\x14\xac}\r\t\xe3.a\xfe\u2588 :: control-char, high-symbol-ratio
+0176. [file] webapp\\\xc63\xd6\xb3\xe0\xec\rk.\xfe\t\u2557 :: control-char
+0177. [file] webapp\\\xca\u2557(?\xc7\x7f\xf4\xf6.\xe6?\x04 :: control-char, high-symbol-ratio
+0178. [file] webapp\\\xccE\xa8\x01\xb3\xf8\xf1\xee.\xb3!8 :: control-char
+0179. [file] webapp\\\xd6\u255a\xb5\xa8\xdc\xaaz\n.\xd9:r :: control-char
+0180. [file] webapp\\\xd7 :: high-symbol-ratio
+0181. [file] webapp\\\xd7\u2550h\u252c\xa8i:s.\xe8\x17\xe7 :: control-char, high-symbol-ratio
+0182. [file] webapp\\\xd8\xfa\xb61\xea\xa7\x12\xff.\r\xa4r :: control-char, high-symbol-ratio
+0183. [file] webapp\\\xdb\x12\xaf\xd4\xaa\xd9\x1a\u2580.\xf6\x1e\xbd :: control-char, high-symbol-ratio
+0184. [file] webapp\\\xe1vS\xbf\xf75$\x18.\xe7\xd8o :: control-char
+0185. [file] webapp\\\xe2\xce\u2557a\xc6\x134\xeb.\xb8\u2500n :: control-char
+0186. [file] webapp\\\xe6h\xc7ut\x14\xd2}.\xd90\xf2 :: control-char
+0187. [file] webapp\\\xe7\xbfg\xeae\u2500\xf3\u2524.kc\x11 :: control-char
+0188. [file] webapp\\\xe7\u255d\xae\xeb\xc7@|\x1b.\x111n :: control-char, high-symbol-ratio
+0189. [file] webapp\\\xe8k\xc5\xa4S,\xaf\x0e.x8h :: control-char
+0190. [file] webapp\\\xeb\x04XGG1\xcc\xc0.\x0eS\x19 :: control-char
+0191. [file] webapp\\\xeb.\x12\u2593g:rl.\x19\xc9\xaf :: control-char
+0192. [file] webapp\\\xed_\xf1\xf0y\xa2\xfc\x15.\xe2\xe8u :: control-char
+0193. [file] webapp\\\xed\xa9\xf7\xb0<\u253c\xd4\xaf.\xc7\xe7\xe2 :: high-symbol-ratio
+0194. [file] webapp\\\xf1\xd02\xe3\xf5\xf6\xf8\xcf.\xe4\x15\xdb :: control-char
+0195. [file] webapp\\\xf1\u2500\xf9\u255dd\xe6]%.\x0f\xb6\x11 :: control-char, high-symbol-ratio
+0196. [file] webapp\\\xf5l&\x7fac\u251c\u250c.y\u252c\xab :: high-symbol-ratio
+0197. [file] webapp\\\xf7!\xdb\x19b\x19\u2592(.\xdd\u250cX :: control-char, high-symbol-ratio
+0198. [file] webapp\\\xf9q|L8V\xd3\xb6.\x05\xd9\xfc :: control-char
+0199. [file] webapp\\\xff\x12\xec\xbf\xc1\xcaBS.\xfbr\u2534 :: control-char
+0200. [file] webapp\\\u2502\x19I8?MgN.\xb1\xd4\xf0 :: control-char
+0201. [file] webapp\\\u25022h\xc2Z\xc3\xbe\xfe.\x17\xc6\xe2 :: control-char
+0202. [file] webapp\\\u2514\x0f2\xe0\x03\u2017\xf0\u2554.k\u2557\xbc :: control-char, high-symbol-ratio
+0203. [file] webapp\\\u2518@W:\u0192T\u2500\xa7.\xd8\x0c\u2550 :: control-char, high-symbol-ratio
+0204. [file] webapp\\\u2534\xd9\xa6 \u2554\t\xdc\u2500.{b\xc0 :: control-char, high-symbol-ratio
+0205. [file] webapp\\\u255a\xf8\xdc\x08\x08\u2500\xc0\x11.\x11\xd2\x14 :: control-char, high-symbol-ratio
+0206. [file] webapp\\\u255dQ\xd6R\xceCQ@.\xe4\x0b\u251c :: control-char
+0207. [file] webapp\\\u2560\x17\u250c\xde\x7f\xb4\xa3x.\xb6\x1b\u252c :: control-char, high-symbol-ratio
+0208. [file] webapp\\\u2566\x06\u2551\xca\xa8\xf1"\xab.\xb4dh :: control-char, high-symbol-ratio
+0209. [file] webapp\\\u25668>&\x1c+p\xb7.\xe9\xa7\u2514 :: control-char, high-symbol-ratio
+0210. [file] webapp\\\u256cq\xb7\x18\u2500z\t\u2560.\xe5g\xae :: control-char, high-symbol-ratio
+0211. [file] webapp\\\u2580\xe1}\u2580S\xdf\xf7\xcb.\x1dk\xe7 :: control-char
+0212. [file] webapp\\\u2591\xe4i\xd4\u256c-\u2017\xb1.\x0fe\xbc :: control-char, high-symbol-ratio

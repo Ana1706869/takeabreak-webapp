@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Break - Dados Pessoais</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="topbar">
+    <div>
+        <h2>Take a Break Web</h2>
+        <p th:text="'Ola, ' + ${nome}"></p>
+    </div>
+    <div class="topbar-actions">
+        <a href="/dashboard" class="btn-link">Dashboard</a>
+        <form method="post" action="/perfil/eliminar" onsubmit="return confirm('Tem a certeza que deseja eliminar o seu perfil? Esta ação é irreversível.');">
+            <button type="submit" class="btn-danger">Eliminar Perfil</button>
+        </form>
+        <a href="/logout" class="btn-link">Sair</a>
+    </div>
+</div>
+
+<div class="container">
+    <p th:if="${erro}" class="error" th:text="${erro}"></p>
+    <p th:if="${ok}" class="ok" th:text="${ok}"></p>
+
+    <section class="card">
+        <h3>Alterar Dados Pessoais</h3>
+        <form method="post" action="/perfil/atualizar" class="form">
+            <div class="form-field">
+                <label>Nome</label>
+                <input type="text" name="nome" th:value="${perfil.nome()}" required>
+            </div>
+            <div class="form-field">
+                <label>Email</label>
+                <input type="email" name="email" th:value="${perfil.email()}" required>
+            </div>
+            <div class="form-field">
+                <label>Telefone</label>
+                <input type="text" name="telefone" th:value="${perfil.telefone()}" required>
+            </div>
+            <div class="form-field">
+                <label>Departamento</label>
+                <select name="departamento" class="compact-select" required>
+                    <option value="Administração de Sistemas" th:selected="${perfil.departamento() == 'Administração de Sistemas'}">Administração de Sistemas</option>
+                    <option value="Administração de Infra-estrutura de Rede" th:selected="${perfil.departamento() == 'Administração de Infra-estrutura de Rede'}">Administração de Infra-estrutura de Rede</option>
+                    <option value="Manutenção de Equipamento e Serviços" th:selected="${perfil.departamento() == 'Manutenção de Equipamento e Serviços'}">Manutenção de Equipamento e Serviços</option>
+                    <option value="Suporte aos Utilizadores" th:selected="${perfil.departamento() == 'Suporte aos Utilizadores'}">Suporte aos Utilizadores</option>
+                    <option value="Desenvolvimento e Implementação de Novos Projetos" th:selected="${perfil.departamento() == 'Desenvolvimento e Implementação de Novos Projetos'}">Desenvolvimento e Implementação de Novos Projetos</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Escalão</label>
+                <select name="escalao" class="compact-select compact-select--small" required>
+                    <option value="1" th:selected="${perfil.escalao() == 1}">1</option>
+                    <option value="2" th:selected="${perfil.escalao() == 2}">2</option>
+                    <option value="3" th:selected="${perfil.escalao() == 3}">3</option>
+                    <option value="4" th:selected="${perfil.escalao() == 4}">4</option>
+                    <option value="5" th:selected="${perfil.escalao() == 5}">5</option>
+                    <option value="6" th:selected="${perfil.escalao() == 6}">6</option>
+                    <option value="7" th:selected="${perfil.escalao() == 7}">7</option>
+                    <option value="8" th:selected="${perfil.escalao() == 8}">8</option>
+                    <option value="9" th:selected="${perfil.escalao() == 9}">9</option>
+                    <option value="10" th:selected="${perfil.escalao() == 10}">10</option>
+                    <option value="11" th:selected="${perfil.escalao() == 11}">11</option>
+                    <option value="12" th:selected="${perfil.escalao() == 12}">12</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Data de Admissão</label>
+                <input type="text" th:value="${perfil.dataAdmissao()}" disabled>
+            </div>
+            <div class="form-field">
+                <label>Morada</label>
+                <input type="text" name="morada" th:value="${perfil.morada()}">
+            </div>
+            <div class="form-field">
+                <label>Código Postal</label>
+                <input type="text" name="codigoPostal" th:value="${perfil.codigoPostal()}">
+            </div>
+            <div class="form-field">
+                <label>Localidade</label>
+                <input type="text" name="localidade" th:value="${perfil.localidade()}">
+            </div>
+            <div class="form-field">
+                <label>Concelho</label>
+                <input type="text" name="concelho" th:value="${perfil.concelho()}">
+            </div>
+            <div class="form-field">
+                <label>Distrito</label>
+                <input type="text" name="distrito" th:value="${perfil.distrito()}">
+            </div>
+            <div class="form-field">
+                <label>Nova Palavra-passe (opcional)</label>
+                <input type="password" name="password">
+            </div>
+            <div class="form-field">
+                <label>Confirmar Nova Palavra-passe</label>
+                <input type="password" name="passwordConfirm">
+            </div>
+            <button type="submit">Guardar Alterações</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

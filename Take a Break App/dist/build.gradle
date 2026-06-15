@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.benf:cfr:0.151'
+}
+
+task downloadCFR {
+    doLast {
+        println "CFR descarregado!"
+    }
+}

@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar webapp/target/take-a-break-web-1.0.0.jar

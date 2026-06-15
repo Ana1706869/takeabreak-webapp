@@ -1,0 +1,75 @@
+# Usar Docker Compose para testar localmente antes de Railway
+
+version: '3.9'
+
+services:
+  # Base de Dados MySQL
+  db:
+    image: mysql:8.0
+    container_name: takeabreak-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: take_a_break_web
+      MYSQL_USER: takeabreak
+      MYSQL_PASSWORD: Informatica_1706869
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./src/main/resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+    networks:
+      - takeabreak-net
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: takeabreak-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - app
+    networks:
+      - takeabreak-net
+
+  # Aplicação Spring Boot
+  app:
+    build:
+      context: .
+      dockerfile: ./webapp/Dockerfile
+    container_name: takeabreak-app
+    restart: unless-stopped
+    environment:
+      DB_URL: jdbc:mysql://db:3306/take_a_break_web?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USER: takeabreak
+      DB_PASS: Informatica_1706869
+      DATASOURCE_DRIVER: com.mysql.cj.jdbc.Driver
+    ports:
+      - "8081:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/login"]
+      timeout: 10s
+      retries: 5
+      interval: 10s
+    networks:
+      - takeabreak-net
+
+volumes:
+  mysql-data:
+
+networks:
+  takeabreak-net:
+    driver: bridge

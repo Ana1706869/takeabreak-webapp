@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro - Take a Break</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .error-code {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+        .error-message {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .error-details {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            max-height: 200px;
+            overflow-y: auto;
+            text-align: left;
+            font-family: monospace;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="card">
+        <div class="error-container">
+            <div class="error-code" th:text="${statusCode}">Erro</div>
+            <div class="error-message" th:text="${message}">Ocorreu um erro inesperado</div>
+            
+            <div th:if="${exception}" class="error-details">
+                <strong>Detalhes:</strong><br>
+                <span th:text="${exception}"></span>
+            </div>
+            
+            <a href="/index.html" class="btn">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

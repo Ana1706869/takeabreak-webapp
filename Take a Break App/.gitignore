@@ -1,0 +1,18 @@
+# VS Code
+.vscode/launch.json
+
+# Build
+bin/
+target/
+*.class
+
+# IDE
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+
+# Data
+*.log
+*.db
