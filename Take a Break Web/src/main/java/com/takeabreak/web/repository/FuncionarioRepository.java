@@ -84,7 +84,7 @@ public class FuncionarioRepository {
 
     public void create(String nome, String email, String password, String departamento, int escalao,
                        String morada, String codigoPostal, String localidade, String concelho, String distrito, String telefone) {
-        String sql = "INSERT INTO funcionario (nome, email, password, departamento, escalao, role, data_admissao, morada, codigo_postal, localidade, concelho, distrito, telefone) VALUES (?, ?, ?, ?, ?, 'FUNCIONARIO', CURDATE(), ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO funcionario (nome, email, password, departamento, escalao, role, data_admissao, morada, codigo_postal, localidade, concelho, distrito, telefone) VALUES (?, ?, ?, ?, ?, 'FUNCIONARIO', CURRENT_DATE, ?, ?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, nome, email, password, departamento, escalao, morada, codigoPostal, localidade, concelho, distrito, telefone);
     }
 
