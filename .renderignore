@@ -1,0 +1,7 @@
+logs/
+certs/
+*.log
+.git/
+.vscode/
+node_modules/
+target/

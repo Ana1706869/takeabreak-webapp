@@ -1,0 +1,11 @@
+com\takeabreak\web\controller\WebController.class
+com\takeabreak\web\service\AuthService.class
+com\takeabreak\web\service\FolgaService.class
+com\takeabreak\web\controller\ErrorHandlingController.class
+com\takeabreak\web\config\CanonicalHostRedirectFilter.class
+com\takeabreak\web\model\Funcionario.class
+com\takeabreak\web\TakeABreakWebApplication.class
+com\takeabreak\web\model\Folga.class
+com\takeabreak\web\service\FolgaService$ResultadoValidacao.class
+com\takeabreak\web\repository\FuncionarioRepository.class
+com\takeabreak\web\repository\FolgaRepository.class

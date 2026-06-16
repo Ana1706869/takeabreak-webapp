@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Break - Dashboard</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="topbar">
+    <div>
+        <h2>Take a Break Web</h2>
+        <p th:text="'Ola, ' + ${nome}"></p>
+    </div>
+    <div class="topbar-actions">
+        <a href="/perfil" class="btn-link">Dados Pessoais</a>
+        <a href="/logout" class="btn-link">Sair</a>
+    </div>
+</div>
+
+<div class="container">
+    <p th:if="${erro}" class="error" th:text="${erro}"></p>
+    <p th:if="${ok}" class="ok" th:text="${ok}"></p>
+
+    <section class="card" th:if="${!manager}">
+        <h3>Pedido de Ausencia</h3>
+        <form method="post" action="/folgas" class="form inline">
+            <div class="form-field">
+                <label>Data Inicio</label>
+                <input type="date" name="dataInicio" required>
+            </div>
+            <div class="form-field">
+                <label>Data Fim</label>
+                <input type="date" name="dataFim" required>
+            </div>
+            <div class="form-field">
+                <label>Motivo</label>
+                <select name="motivo" class="compact-select compact-select--motivo" required>
+                    <option value="Doença">Doença</option>
+                    <option value="Doença com regime de proteção pela Segurança Social">Doença com regime de proteção pela Segurança Social</option>
+                    <option value="Férias">Férias</option>
+                    <option value="Falecimento de cônjuge">Falecimento de cônjuge</option>
+                    <option value="Falecimento de avós">Falecimento de avós</option>
+                    <option value="Falecimento de pais">Falecimento de pais</option>
+                    <option value="Falecimento de filhos">Falecimento de filhos</option>
+                    <option value="Falecimento de irmãos">Falecimento de irmãos</option>
+                    <option value="Licença de casamento">Licença de casamento</option>
+                    <option value="Licença de maternidade">Licença de maternidade</option>
+                    <option value="Licença de paternidade">Licença de paternidade</option>
+                    <option value="Assistência à família">Assistência à família</option>
+                    <option value="Assistência a filho">Assistência a filho</option>
+                    <option value="Assistência a filho deficiente ou com doença crónica">Assistência a filho deficiente ou com doença crónica</option>
+                </select>
+            </div>
+            <button type="submit">Submeter</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h3 th:text="${manager} ? 'Gestao de Ausencias' : 'Minhas Ausencias'"></h3>
+        <form th:if="${manager}" method="get" action="/dashboard" class="form inline filter-form">
+            <div class="filter-field">
+                <label for="filtroEstadoGestor">Estado</label>
+                <select id="filtroEstadoGestor" name="estado">
+                    <option value="" th:selected="${filtroEstado == ''}">Todos</option>
+                    <option value="APROVADA" th:selected="${filtroEstado == 'APROVADA'}">Aprovada</option>
+                    <option value="REJEITADA" th:selected="${filtroEstado == 'REJEITADA'}">Rejeitada</option>
+                </select>
+            </div>
+            <div class="filter-field">
+                <label for="filtroFuncionarioGestor">Funcionario</label>
+                <input id="filtroFuncionarioGestor" type="text" name="funcionario" th:value="${filtroFuncionario}">
+            </div>
+            <div class="filter-field">
+                <label for="filtroDepartamentoGestor">Departamento</label>
+                <select id="filtroDepartamentoGestor" name="departamento" class="compact-select compact-select--manager-dept">
+                    <option value="" th:selected="${filtroDepartamento == ''}">(Todos)</option>
+                    <option value="Administração de Sistemas" th:selected="${filtroDepartamento == 'Administração de Sistemas'}">Administração de Sistemas</option>
+                    <option value="Administração de Infra-estrutura de Rede" th:selected="${filtroDepartamento == 'Administração de Infra-estrutura de Rede'}">Administração de Infra-estrutura de Rede</option>
+                    <option value="Manutenção de Equipamento e Serviços" th:selected="${filtroDepartamento == 'Manutenção de Equipamento e Serviços'}">Manutenção de Equipamento e Serviços</option>
+                    <option value="Suporte aos Utilizadores" th:selected="${filtroDepartamento == 'Suporte aos Utilizadores'}">Suporte aos Utilizadores</option>
+                    <option value="Desenvolvimento e Implementação de Novos Projetos" th:selected="${filtroDepartamento == 'Desenvolvimento e Implementação de Novos Projetos'}">Desenvolvimento e Implementação de Novos Projetos</option>
+                </select>
+            </div>
+            <button type="submit">Pesquisar</button>
+            <a href="/dashboard" class="btn-link">Limpar</a>
+        </form>
+        <form th:if="${!manager}" method="get" action="/dashboard" class="form inline filter-form">
+            <div class="filter-field">
+                <label for="filtroEstado">Estado</label>
+                <select id="filtroEstado" name="estado">
+                    <option value="" th:selected="${filtroEstado == ''}">Todos</option>
+                    <option value="APROVADA" th:selected="${filtroEstado == 'APROVADA'}">Aprovada</option>
+                    <option value="REJEITADA" th:selected="${filtroEstado == 'REJEITADA'}">Rejeitada</option>
+                </select>
+            </div>
+            <div class="filter-field">
+                <label for="filtroDataPedido">Data Pedido</label>
+                <input id="filtroDataPedido" type="date" name="dataPedido" th:value="${filtroDataPedido}">
+            </div>
+            <div class="filter-field">
+                <label for="filtroDataInicio">Data Inicio</label>
+                <input id="filtroDataInicio" type="date" name="dataInicio" th:value="${filtroDataInicio}">
+            </div>
+            <button type="submit">Pesquisar</button>
+            <a href="/dashboard" class="btn-link">Limpar</a>
+        </form>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Funcionario</th>
+                    <th>Data Pedido</th>
+                    <th>Inicio</th>
+                    <th>Fim</th>
+                    <th>Motivo</th>
+                    <th>Estado</th>
+                    <th>Remuneracao</th>
+                    <th th:if="${!manager}">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="f : ${folgas}">
+                    <td th:text="${f.funcionarioNome()}"></td>
+                    <td th:text="${f.dataPedido()}"></td>
+                    <td th:text="${f.dataInicio()}"></td>
+                    <td th:text="${f.dataFim()}"></td>
+                    <td th:text="${f.motivo()}"></td>
+                    <td th:text="${f.estado()}"></td>
+                    <td th:text="${f.estado() == 'REJEITADA' ? '' : f.remuneracao()}"></td>
+                    <td class="actions" th:if="${!manager}">
+                        <form method="get" action="/folga/editar" style="display:inline;">
+                            <input type="hidden" name="id" th:value="${f.folgaId()}">
+                            <button type="submit" class="btn-small btn-edit">Alterar</button>
+                        </form>
+                        <form method="post" action="/folga/eliminar" style="display:inline;" onsubmit="return confirm('Tem a certeza que deseja eliminar esta ausência?');">
+                            <input type="hidden" name="id" th:value="${f.folgaId()}">
+                            <button type="submit" class="btn-small btn-delete">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination-summary">
+            <span th:text="'Mostrando ' + ${inicioRegistos} + ' - ' + ${fimRegistos} + ' de ' + ${totalRegistos} + ' registos'"></span>
+        </div>
+
+        <div class="pagination" th:if="${totalPaginas > 1}">
+            <a class="btn-link"
+               th:if="${manager and temAnterior}"
+               th:href="@{/dashboard(page=1, estado=${filtroEstado}, funcionario=${filtroFuncionario}, departamento=${filtroDepartamento})}">Primeira</a>
+            <a class="btn-link"
+               th:if="${!manager and temAnterior}"
+               th:href="@{/dashboard(page=1, estado=${filtroEstado}, dataPedido=${filtroDataPedido}, dataInicio=${filtroDataInicio})}">Primeira</a>
+
+            <a class="btn-link"
+               th:if="${manager and temAnterior}"
+               th:href="@{/dashboard(page=${paginaAtual - 1}, estado=${filtroEstado}, funcionario=${filtroFuncionario}, departamento=${filtroDepartamento})}">Anterior</a>
+            <a class="btn-link"
+               th:if="${!manager and temAnterior}"
+               th:href="@{/dashboard(page=${paginaAtual - 1}, estado=${filtroEstado}, dataPedido=${filtroDataPedido}, dataInicio=${filtroDataInicio})}">Anterior</a>
+
+            <span class="pagination-info" th:text="'Pagina ' + ${paginaAtual} + ' de ' + ${totalPaginas}"></span>
+
+            <a class="btn-link"
+               th:if="${manager and temSeguinte}"
+               th:href="@{/dashboard(page=${paginaAtual + 1}, estado=${filtroEstado}, funcionario=${filtroFuncionario}, departamento=${filtroDepartamento})}">Seguinte</a>
+            <a class="btn-link"
+               th:if="${!manager and temSeguinte}"
+               th:href="@{/dashboard(page=${paginaAtual + 1}, estado=${filtroEstado}, dataPedido=${filtroDataPedido}, dataInicio=${filtroDataInicio})}">Seguinte</a>
+
+            <a class="btn-link"
+               th:if="${manager and temSeguinte}"
+               th:href="@{/dashboard(page=${totalPaginas}, estado=${filtroEstado}, funcionario=${filtroFuncionario}, departamento=${filtroDepartamento})}">Ultima</a>
+            <a class="btn-link"
+               th:if="${!manager and temSeguinte}"
+               th:href="@{/dashboard(page=${totalPaginas}, estado=${filtroEstado}, dataPedido=${filtroDataPedido}, dataInicio=${filtroDataInicio})}">Ultima</a>
+        </div>
+    </section>
+</div>
+</body>
+</html>

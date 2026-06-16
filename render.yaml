@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: takeabreak-webapp
+    env: docker
+    region: frankfurt
+    plan: free
+    branch: main
+    
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://sql.bsite.net:3306/anasia_takeabreak?useSSL=false&serverTimezone=UTC
+      - key: DB_USER
+        value: anasia_takeabreak
+      - key: DB_PASS
+        fromFile: /etc/secrets/db_pass
+      - key: PORT
+        value: 10000
+
+databases:
+  - name: takeabreak-db
+    databaseName: takeabreak
+    region: frankfurt
+    plan: free
