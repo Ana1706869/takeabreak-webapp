@@ -49,16 +49,16 @@ public class FolgaRepository {
         String sql = "SELECT f.*, fu.nome AS funcionario_nome FROM folga f " +
             "INNER JOIN funcionario fu ON fu.funcionario_id = f.funcionario_id " +
             "WHERE f.funcionario_id = ? " +
-            "AND (? IS NULL OR f.estado = ?) " +
-            "AND (? IS NULL OR f.data_pedido = ?) " +
-            "AND (? IS NULL OR f.data_inicio = ?) " +
+            "AND (f.estado = COALESCE(?, f.estado)) " +
+            "AND (f.data_pedido = COALESCE(?, f.data_pedido)) " +
+            "AND (f.data_inicio = COALESCE(?, f.data_inicio)) " +
             "ORDER BY f.folga_id DESC " +
             "LIMIT ? OFFSET ?";
         return jdbcTemplate.query(sql, mapper,
             funcionarioId,
-            estado, estado,
-            dataPedido, dataPedido,
-            dataInicio, dataInicio,
+            estado,
+            dataPedido,
+            dataInicio,
             limit, offset);
     }
 
@@ -150,15 +150,15 @@ public class FolgaRepository {
         String sql = "SELECT f.*, fu.nome AS funcionario_nome FROM folga f " +
                 "INNER JOIN funcionario fu ON fu.funcionario_id = f.funcionario_id " +
                 "WHERE f.funcionario_id = ? AND f.motivo = 'Férias' AND f.estado = 'APROVADA' " +
-                "AND YEAR(f.data_inicio) = ? ORDER BY f.data_inicio";
+                "AND EXTRACT(YEAR FROM f.data_inicio) = ? ORDER BY f.data_inicio";
         return jdbcTemplate.query(sql, mapper, funcionarioId, ano);
     }
 
     public long contarDiasMotivo(Long funcionarioId, String motivo, int ano) {
         String sql = "SELECT SUM(CASE WHEN data_fim > data_inicio " +
-                "THEN DATEDIFF(data_fim, data_inicio) + 1 ELSE 1 END) FROM folga " +
+                "THEN (data_fim - data_inicio) + 1 ELSE 1 END) FROM folga " +
                 "WHERE funcionario_id = ? AND motivo = ? AND estado = 'APROVADA' " +
-                "AND YEAR(data_inicio) = ?";
+                "AND EXTRACT(YEAR FROM data_inicio) = ?";
         Long total = jdbcTemplate.queryForObject(sql, Long.class, funcionarioId, motivo, ano);
         return total != null ? total : 0;
     }
