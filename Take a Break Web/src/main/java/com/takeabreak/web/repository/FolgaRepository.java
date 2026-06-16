@@ -65,14 +65,14 @@ public class FolgaRepository {
     public long contarMinhasComFiltros(Long funcionarioId, String estado, LocalDate dataPedido, LocalDate dataInicio) {
         String sql = "SELECT COUNT(*) FROM folga f " +
             "WHERE f.funcionario_id = ? " +
-            "AND (? IS NULL OR f.estado = ?) " +
-            "AND (? IS NULL OR f.data_pedido = ?) " +
-            "AND (? IS NULL OR f.data_inicio = ?)";
+            "AND (f.estado = COALESCE(?, f.estado)) " +
+            "AND (f.data_pedido = COALESCE(?, f.data_pedido)) " +
+            "AND (f.data_inicio = COALESCE(?, f.data_inicio))";
         Long count = jdbcTemplate.queryForObject(sql, Long.class,
             funcionarioId,
-            estado, estado,
-            dataPedido, dataPedido,
-            dataInicio, dataInicio);
+            estado,
+            dataPedido,
+            dataInicio);
         return count != null ? count : 0;
     }
 
@@ -87,32 +87,30 @@ public class FolgaRepository {
     public List<Folga> listarTodasComFiltrosPaginado(String estado, String funcionario, String departamento, int limit, int offset) {
         String sql = "SELECT f.*, fu.nome AS funcionario_nome FROM folga f " +
             "INNER JOIN funcionario fu ON fu.funcionario_id = f.funcionario_id " +
-            "WHERE (? IS NULL OR f.estado = ?) " +
-            "AND (? IS NULL OR fu.nome LIKE CONCAT('%', ?, '%')) " +
-            "AND (? IS NULL OR " +
-            "REPLACE(REPLACE(LOWER(fu.departamento), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento') = " +
-            "REPLACE(REPLACE(LOWER(?), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento')) " +
+            "WHERE (f.estado = COALESCE(?, f.estado)) " +
+            "AND (fu.nome ILIKE '%' || COALESCE(?, '') || '%') " +
+            "AND (replace(replace(lower(fu.departamento), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento') = " +
+            "replace(replace(lower(COALESCE(?, fu.departamento)), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento')) " +
             "ORDER BY f.folga_id DESC " +
             "LIMIT ? OFFSET ?";
         return jdbcTemplate.query(sql, mapper,
-            estado, estado,
-            funcionario, funcionario,
-            departamento, departamento,
+            estado,
+            funcionario,
+            departamento,
             limit, offset);
     }
 
     public long contarTodasComFiltros(String estado, String funcionario, String departamento) {
         String sql = "SELECT COUNT(*) FROM folga f " +
             "INNER JOIN funcionario fu ON fu.funcionario_id = f.funcionario_id " +
-            "WHERE (? IS NULL OR f.estado = ?) " +
-            "AND (? IS NULL OR fu.nome LIKE CONCAT('%', ?, '%')) " +
-            "AND (? IS NULL OR " +
-            "REPLACE(REPLACE(LOWER(fu.departamento), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento') = " +
-            "REPLACE(REPLACE(LOWER(?), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento'))";
+            "WHERE (f.estado = COALESCE(?, f.estado)) " +
+            "AND (fu.nome ILIKE '%' || COALESCE(?, '') || '%') " +
+            "AND (replace(replace(lower(fu.departamento), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento') = " +
+            "replace(replace(lower(COALESCE(?, fu.departamento)), 'infra-estrutura', 'infraestrutura'), 'equipamentos', 'equipamento'))";
         Long count = jdbcTemplate.queryForObject(sql, Long.class,
-            estado, estado,
-            funcionario, funcionario,
-            departamento, departamento);
+            estado,
+            funcionario,
+            departamento);
         return count != null ? count : 0;
     }
 
