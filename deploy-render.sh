@@ -21,32 +21,27 @@ services:
     region: frankfurt
     plan: free
     branch: main
+    dockerfilePath: ./Take a Break Web/Dockerfile
+    dockerContext: ./Take a Break Web
     
     envVars:
-      - key: DB_URL
-        value: jdbc:mysql://takeabreak-db:3306/takeabreak?useSSL=false&serverTimezone=UTC
-      - key: DB_USER
-        value: root
-      - key: DB_PASS
-        value: ${DB_PASSWORD}
-        sync: false
-      - key: JAVA_OPTS
-        value: -Xmx256m -Xms128m
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
       - key: PORT
         value: 10000
-
-databases:
-  - name: takeabreak-db
-    databaseName: takeabreak
-    region: frankfurt
-    plan: free
+      - key: DB_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
 EOF
 
 echo "✓ render.yaml criado"
 echo ""
 
 echo "[2/4] Git commit..."
-git add render.yaml Dockerfile pom.xml src/ webapp/
+git add render.yaml "Take a Break Web/Dockerfile" "Take a Break Web/pom.xml" "Take a Break Web/src/"
 git commit -m "Render.com deployment setup" 2>/dev/null || echo "(Nada para commitar)"
 echo "✓ Git pronto"
 echo ""

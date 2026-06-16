@@ -5,19 +5,17 @@ services:
     region: frankfurt
     plan: free
     branch: main
-    
+    dockerfilePath: ./Take a Break Web/Dockerfile
+    dockerContext: ./Take a Break Web
+
     envVars:
-      - key: DB_URL
-        value: jdbc:mysql://sql.bsite.net:3306/anasia_takeabreak?useSSL=false&serverTimezone=UTC
-      - key: DB_USER
-        value: anasia_takeabreak
-      - key: DB_PASS
-        fromFile: /etc/secrets/db_pass
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
       - key: PORT
         value: 10000
-
-databases:
-  - name: takeabreak-db
-    databaseName: takeabreak
-    region: frankfurt
-    plan: free
+      - key: DB_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
