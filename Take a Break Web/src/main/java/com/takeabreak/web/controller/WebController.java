@@ -29,7 +29,7 @@ public class WebController {
         this.folgaService = folgaService;
     }
 
-    @GetMapping({"/", "/index.html"})
+    @GetMapping({"/", "/index.html", "/login"})
     public String index() {
         return "index";
     }
