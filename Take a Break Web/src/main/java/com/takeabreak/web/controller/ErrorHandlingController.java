@@ -14,9 +14,9 @@ public class ErrorHandlingController implements ErrorController {
 
     @GetMapping
     public String handleError(HttpServletRequest request, Model model) {
-        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-        Throwable throwable = (Throwable) request.getAttribute("javax.servlet.error.exception");
-        String message = (String) request.getAttribute("javax.servlet.error.message");
+        Integer statusCode = (Integer) request.getAttribute("jakarta.servlet.error.status_code");
+        Throwable throwable = (Throwable) request.getAttribute("jakarta.servlet.error.exception");
+        String message = (String) request.getAttribute("jakarta.servlet.error.message");
 
         model.addAttribute("statusCode", statusCode != null ? statusCode : "Erro Desconhecido");
         model.addAttribute("message", message != null ? message : "Ocorreu um erro inesperado.");

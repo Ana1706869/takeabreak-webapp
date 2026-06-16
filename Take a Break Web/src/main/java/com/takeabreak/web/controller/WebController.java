@@ -39,22 +39,27 @@ public class WebController {
                         @RequestParam String password,
                         HttpSession session,
                         Model model) {
-        String erroLogin = authService.validarLogin(email, password);
-        if (erroLogin != null) {
-            model.addAttribute("erro", erroLogin);
+        try {
+            String erroLogin = authService.validarLogin(email, password);
+            if (erroLogin != null) {
+                model.addAttribute("erro", erroLogin);
+                return "index";
+            }
+
+            Funcionario funcionario = authService.login(email, password).orElse(null);
+            if (funcionario == null) {
+                model.addAttribute("erro", "Falha na autenticacao. Verifique as credenciais.");
+                return "index";
+            }
+
+            session.setAttribute("userId", funcionario.funcionarioId());
+            session.setAttribute("userNome", funcionario.nome());
+            session.setAttribute("userRole", funcionario.role());
+            return "redirect:/dashboard";
+        } catch (Exception e) {
+            model.addAttribute("erro", "Erro ao processar login: " + e.getMessage());
             return "index";
         }
-
-        Funcionario funcionario = authService.login(email, password).orElse(null);
-        if (funcionario == null) {
-            model.addAttribute("erro", "Falha na autenticacao. Verifique as credenciais.");
-            return "index";
-        }
-
-        session.setAttribute("userId", funcionario.funcionarioId());
-        session.setAttribute("userNome", funcionario.nome());
-        session.setAttribute("userRole", funcionario.role());
-        return "redirect:/dashboard";
     }
 
     @GetMapping("/registo")
