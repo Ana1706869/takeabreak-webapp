@@ -70,6 +70,7 @@ public class WebController {
                                 @RequestParam String telefone,
                                 @RequestParam String departamento,
                                 @RequestParam Integer escalao,
+                                @RequestParam String dataAdmissao,
                                 @RequestParam String morada,
                                 @RequestParam String codigoPostal,
                                 @RequestParam String localidade,
@@ -77,7 +78,7 @@ public class WebController {
                                 @RequestParam String distrito,
                                 Model model) {
         try {
-            String erro = authService.registar(nome, email, password, passwordConfirm, telefone, departamento, escalao, morada, codigoPostal, localidade, concelho, distrito);
+            String erro = authService.registar(nome, email, password, passwordConfirm, telefone, departamento, escalao, dataAdmissao, morada, codigoPostal, localidade, concelho, distrito);
             if (erro != null) {
                 model.addAttribute("erro", erro);
                 return "registo";

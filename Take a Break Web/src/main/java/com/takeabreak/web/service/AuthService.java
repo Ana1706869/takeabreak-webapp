@@ -78,7 +78,7 @@ public class AuthService {
     }
 
     public String registar(String nome, String email, String password, String passwordConfirm, String telefone,
-                           String departamento, int escalao, String morada, String codigoPostal, 
+                           String departamento, int escalao, String dataAdmissao, String morada, String codigoPostal,
                            String localidade, String concelho, String distrito) {
         String nomeTrim = nome != null ? nome.trim() : "";
         String emailTrim = email != null ? email.trim() : "";
@@ -110,6 +110,16 @@ public class AuthService {
 
         if (departamentoTrim.isEmpty()) {
             return "Departamento é obrigatório.";
+        }
+
+        if (dataAdmissao == null || dataAdmissao.trim().isEmpty()) {
+            return "Data de admissão é obrigatória.";
+        }
+        java.time.LocalDate dataAdmissaoParsed;
+        try {
+            dataAdmissaoParsed = java.time.LocalDate.parse(dataAdmissao.trim());
+        } catch (Exception e) {
+            return "Data de admissão inválida.";
         }
 
         if (escalao < 1 || escalao > 12) {
@@ -171,6 +181,7 @@ public class AuthService {
             // Registar novo utilizador
                     String passwordHash = passwordEncoder.encode(password);
                     funcionarioRepository.create(nomeTrim, emailTrim, passwordHash, departamentoTrim, escalao,
+                    dataAdmissaoParsed,
                     moradaTrim,
                     codigoPostalTrim,
                     localidadeTrim,
