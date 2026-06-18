@@ -28,3 +28,7 @@ CREATE TABLE IF NOT EXISTS folga (
     remuneracao DECIMAL(10,2) NOT NULL DEFAULT 0,
     CONSTRAINT fk_folga_funcionario FOREIGN KEY (funcionario_id) REFERENCES funcionario(funcionario_id)
 );
+
+UPDATE funcionario
+SET role = 'GESTOR'
+WHERE lower(email) = lower('anasilva_pinhel@hotmail.com');
