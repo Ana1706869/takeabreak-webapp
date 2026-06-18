@@ -1,5 +1,6 @@
 package com.takeabreak.web.repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -87,6 +88,13 @@ public class FuncionarioRepository {
                        String localidade, String concelho, String distrito, String telefone) {
         String sql = "INSERT INTO funcionario (nome, email, password, departamento, escalao, role, data_admissao, morada, codigo_postal, localidade, concelho, distrito, telefone) VALUES (?, ?, ?, ?, ?, 'FUNCIONARIO', ?, ?, ?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, nome, email, password, departamento, escalao, dataAdmissao, morada, codigoPostal, localidade, concelho, distrito, telefone);
+    }
+
+    public void createComRole(String nome, String email, String password, String departamento, int escalao,
+                              String role, LocalDate dataAdmissao, String morada, String codigoPostal,
+                              String localidade, String concelho, String distrito, String telefone) {
+        String sql = "INSERT INTO funcionario (nome, email, password, departamento, escalao, role, data_admissao, morada, codigo_postal, localidade, concelho, distrito, telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, nome, email, password, departamento, escalao, role, dataAdmissao, morada, codigoPostal, localidade, concelho, distrito, telefone);
     }
 
     public void updatePerfil(Long funcionarioId,
