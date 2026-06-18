@@ -95,14 +95,15 @@ public class FuncionarioRepository {
                              String password,
                              String departamento,
                              int escalao,
+                             java.time.LocalDate dataAdmissao,
                              String morada,
                              String codigoPostal,
                              String localidade,
                              String concelho,
                              String distrito,
                              String telefone) {
-        String sql = "UPDATE funcionario SET nome = ?, email = ?, password = ?, departamento = ?, escalao = ?, morada = ?, codigo_postal = ?, localidade = ?, concelho = ?, distrito = ?, telefone = ? WHERE funcionario_id = ?";
-        jdbcTemplate.update(sql, nome, email, password, departamento, escalao, morada, codigoPostal, localidade, concelho, distrito, telefone, funcionarioId);
+        String sql = "UPDATE funcionario SET nome = ?, email = ?, password = ?, departamento = ?, escalao = ?, data_admissao = ?, morada = ?, codigo_postal = ?, localidade = ?, concelho = ?, distrito = ?, telefone = ? WHERE funcionario_id = ?";
+        jdbcTemplate.update(sql, nome, email, password, departamento, escalao, dataAdmissao, morada, codigoPostal, localidade, concelho, distrito, telefone, funcionarioId);
     }
 
     public void deleteById(Long funcionarioId) {

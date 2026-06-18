@@ -206,6 +206,7 @@ public class AuthService {
                                   String telefone,
                                   String departamento,
                                   Integer escalao,
+                                  String dataAdmissao,
                                   String morada,
                                   String codigoPostal,
                                   String localidade,
@@ -244,6 +245,15 @@ public class AuthService {
             return "Ja existe um utilizador com este telefone.";
         }
 
+        java.time.LocalDate dataAdmissaoFinal = atual.dataAdmissao();
+        if (dataAdmissao != null && !dataAdmissao.trim().isEmpty()) {
+            try {
+                dataAdmissaoFinal = java.time.LocalDate.parse(dataAdmissao.trim());
+            } catch (Exception e) {
+                return "Data de admissão inválida.";
+            }
+        }
+
         String passwordFinal = atual.password();
         boolean passwordInformada = password != null && !password.isBlank();
         boolean passwordConfirmInformada = passwordConfirm != null && !passwordConfirm.isBlank();
@@ -262,8 +272,9 @@ public class AuthService {
                 nome.trim(),
                 email.trim(),
                 passwordFinal,
-            departamento.trim(),
-            escalao,
+                departamento.trim(),
+                escalao,
+                dataAdmissaoFinal,
                 morada != null ? morada.trim() : "",
                 codigoPostal != null ? codigoPostal.trim() : "",
                 localidade != null ? localidade.trim() : "",
