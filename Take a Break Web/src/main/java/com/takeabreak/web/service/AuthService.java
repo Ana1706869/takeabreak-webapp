@@ -261,7 +261,7 @@ public class AuthService {
             if (!passwordInformada || !passwordConfirmInformada) {
                 return "Para alterar a palavra-passe, preencha os dois campos de palavra-passe.";
             }
-            if (!password.equals(passwordConfirm)) {
+            if (!java.util.Objects.equals(password, passwordConfirm)) {
                 return "As palavras-passe não coincidem. Verifique e tente novamente.";
             }
             passwordFinal = passwordEncoder.encode(password);
