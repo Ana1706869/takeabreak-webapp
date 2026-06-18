@@ -18,7 +18,7 @@ public class AuthService {
     private static final String EMAIL_FUNCIONARIA_PADRAO = "anasilva_pinhel@hotmail.com";
     private static final String PASSWORD_FUNCIONARIA_PADRAO = "informatica";
 
-    private static final String EMAIL_GESTOR_PRODUCAO = "gestor@gmai.lcom";
+    private static final String EMAIL_GESTOR_PRODUCAO = "gestor@gmail.com";
     private static final String PASSWORD_GESTOR_PADRAO = "admin";
 
     private final FuncionarioRepository funcionarioRepository;
