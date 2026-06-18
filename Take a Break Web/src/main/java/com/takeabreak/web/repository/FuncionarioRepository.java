@@ -115,4 +115,9 @@ public class FuncionarioRepository {
         String sql = "UPDATE funcionario SET password = ? WHERE funcionario_id = ?";
         jdbcTemplate.update(sql, passwordHash, funcionarioId);
     }
+
+    public void updateRoleByEmail(String email, String role) {
+        String sql = "UPDATE funcionario SET role = ? WHERE email = ?";
+        jdbcTemplate.update(sql, role, email);
+    }
 }

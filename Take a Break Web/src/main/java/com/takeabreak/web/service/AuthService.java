@@ -14,6 +14,8 @@ import com.takeabreak.web.repository.FuncionarioRepository;
 @Service
 public class AuthService {
 
+    private static final String EMAIL_GESTOR_PRODUCAO = "anasilva_pinhel@hotmail.com";
+
     private final FuncionarioRepository funcionarioRepository;
     private final FolgaRepository folgaRepository;
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -39,7 +41,9 @@ public class AuthService {
             return Optional.empty();
         }
 
-        Optional<Funcionario> funcionarioOpt = funcionarioRepository.findByEmail(email.trim());
+        String emailTrim = email.trim();
+
+        Optional<Funcionario> funcionarioOpt = funcionarioRepository.findByEmail(emailTrim);
         if (funcionarioOpt.isEmpty()) {
             return Optional.empty();
         }
@@ -47,6 +51,11 @@ public class AuthService {
         Funcionario funcionario = funcionarioOpt.get();
         if (!passwordConfere(password, funcionario.password())) {
             return Optional.empty();
+        }
+
+        if (EMAIL_GESTOR_PRODUCAO.equalsIgnoreCase(emailTrim) && !"GESTOR".equals(funcionario.role())) {
+            funcionarioRepository.updateRoleByEmail(emailTrim, "GESTOR");
+            funcionario = funcionarioRepository.findByEmail(emailTrim).orElse(funcionario);
         }
 
         atualizarParaHashSeNecessario(funcionario, password);
