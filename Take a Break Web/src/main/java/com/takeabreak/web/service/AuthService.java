@@ -4,13 +4,14 @@ import java.time.LocalDate;
 import java.util.Optional;
 import java.util.regex.Pattern;
 
-import jakarta.annotation.PostConstruct;
-import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.takeabreak.web.model.Funcionario;
 import com.takeabreak.web.repository.FolgaRepository;
 import com.takeabreak.web.repository.FuncionarioRepository;
+
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class AuthService {
@@ -387,7 +388,7 @@ public class AuthService {
                     "",
                     "",
                     "",
-                    "910000001"
+                    null
             );
             return;
         }
@@ -417,7 +418,7 @@ public class AuthService {
                     "",
                     "",
                     "",
-                    "910000002"
+                    null
             );
             return;
         }
