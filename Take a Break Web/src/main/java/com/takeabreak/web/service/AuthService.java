@@ -16,9 +16,6 @@ import jakarta.annotation.PostConstruct;
 @Service
 public class AuthService {
 
-    private static final String EMAIL_FUNCIONARIA_PADRAO = "anasilva_pinhel@hotmail.com";
-    private static final String PASSWORD_FUNCIONARIA_PADRAO = "informatica";
-
     private static final String EMAIL_GESTOR_PRODUCAO = "gestor@gmail.com";
     private static final String PASSWORD_GESTOR_PADRAO = "admin";
 
@@ -34,7 +31,6 @@ public class AuthService {
     @PostConstruct
     public void inicializarContasPadrao() {
         garantirContaGestorPadrao();
-        garantirContaFuncionariaPadrao();
         migrarPasswordsEmTextoPlano();
     }
 
@@ -67,9 +63,6 @@ public class AuthService {
 
         if (EMAIL_GESTOR_PRODUCAO.equalsIgnoreCase(emailTrim) && !"GESTOR".equals(funcionario.role())) {
             funcionarioRepository.updateRoleByEmail(emailTrim, "GESTOR");
-            funcionario = funcionarioRepository.findByEmail(emailTrim).orElse(funcionario);
-        } else if (EMAIL_FUNCIONARIA_PADRAO.equalsIgnoreCase(emailTrim) && !"FUNCIONARIO".equals(funcionario.role())) {
-            funcionarioRepository.updateRoleByEmail(emailTrim, "FUNCIONARIO");
             funcionario = funcionarioRepository.findByEmail(emailTrim).orElse(funcionario);
         }
 
@@ -402,33 +395,5 @@ public class AuthService {
         }
     }
 
-    private void garantirContaFuncionariaPadrao() {
-        Optional<Funcionario> funcionariaOpt = funcionarioRepository.findByEmail(EMAIL_FUNCIONARIA_PADRAO);
-        if (funcionariaOpt.isEmpty()) {
-            funcionarioRepository.createComRole(
-                    "Funcionaria",
-                    EMAIL_FUNCIONARIA_PADRAO,
-                    passwordEncoder.encode(PASSWORD_FUNCIONARIA_PADRAO),
-                    "Operacoes",
-                    1,
-                    "FUNCIONARIO",
-                    LocalDate.now(),
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    null
-            );
-            return;
-        }
-
-        Funcionario funcionaria = funcionariaOpt.get();
-        if (!"FUNCIONARIO".equals(funcionaria.role())) {
-            funcionarioRepository.updateRoleByEmail(EMAIL_FUNCIONARIA_PADRAO, "FUNCIONARIO");
-        }
-        if (!passwordConfere(PASSWORD_FUNCIONARIA_PADRAO, funcionaria.password())) {
-            funcionarioRepository.updatePasswordById(funcionaria.funcionarioId(), passwordEncoder.encode(PASSWORD_FUNCIONARIA_PADRAO));
-        }
-    }
 }
+

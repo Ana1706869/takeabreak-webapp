@@ -32,7 +32,3 @@ CREATE TABLE IF NOT EXISTS folga (
 UPDATE funcionario
 SET role = 'GESTOR'
 WHERE lower(email) = lower('gestor@gmail.com');
-
-UPDATE funcionario
-SET role = 'FUNCIONARIO'
-WHERE lower(email) = lower('anasilva_pinhel@hotmail.com');
